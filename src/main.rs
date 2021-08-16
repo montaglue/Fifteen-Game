@@ -135,7 +135,7 @@ fn _dispatch_error_no_macro<'fut>(
 
 #[tokio::main(flavor = "current_thread")]
 pub async fn main() {
-    let token = "ODc2MjM2NjQzNjk3MzI4MTQw.YRhI9w.zw9z3OImj0t2vrfXkfg0mBiQmDI";
+    let token = env::var("DISCORD_TOKEN").expect("token");
 
     let http = Http::new_with_token(&token);
 
