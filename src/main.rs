@@ -1,5 +1,3 @@
-use std::collections::{HashMap, HashSet};
-
 use position::{Dir, Neighbors, Pos, START};
 use serenity::{
     async_trait,
@@ -22,6 +20,8 @@ use serenity::{
     prelude::*,
     FutureExt,
 };
+use std::collections::{HashMap, HashSet};
+use std::env;
 use A_star::A_star;
 
 mod A_star;
